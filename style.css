@@ -11,17 +11,16 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121316;
-    --surface: #1a1c20;
-    --text: #e8e8ea;
-    --muted: #9aa0a6;
-    --border: #2c2f35;
-    --accent: #7fb0ff;
-    --accent-soft: #1d2a40;
-    color-scheme: dark;
-  }
+/* Dark is the default theme; the header button switches to light and remembers the choice. */
+:root[data-theme="dark"] {
+  --bg: #121316;
+  --surface: #1a1c20;
+  --text: #e8e8ea;
+  --muted: #9aa0a6;
+  --border: #2c2f35;
+  --accent: #7fb0ff;
+  --accent-soft: #1d2a40;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -82,6 +81,34 @@ a:hover { text-decoration: underline; }
 .nav ul { display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
 .nav ul a { color: var(--muted); font-size: 0.93rem; }
 .nav ul a:hover { color: var(--text); text-decoration: none; }
+
+/* Light/dark toggle: sun in dark mode (switch to light), moon in light mode. */
+.nav ul { margin-left: auto; }
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--muted); }
+.theme-toggle svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
 /* Hero */
 .hero {
@@ -267,9 +294,7 @@ h2 {
   color: #6b4e00;
   font-size: 0.72rem;
 }
-@media (prefers-color-scheme: dark) {
-  .badge { background: #4a3c12; color: #f3d98a; }
-}
+[data-theme="dark"] .badge { background: #4a3c12; color: #f3d98a; }
 
 .subhead { font-size: 1.05rem; color: var(--muted); margin: 1.5rem 0 0; }
 
@@ -346,10 +371,8 @@ h2 {
   font-size: 0.9rem !important;
 }
 .highlight-note strong { color: #3a2b00; }
-@media (prefers-color-scheme: dark) {
-  .highlight-note { background: #3a3015; color: #f3dfa0; border-left-color: #c99a1a; }
-  .highlight-note strong { color: #fff1c4; }
-}
+[data-theme="dark"] .highlight-note { background: #3a3015; color: #f3dfa0; border-left-color: #c99a1a; }
+[data-theme="dark"] .highlight-note strong { color: #fff1c4; }
 
 .project-note { color: var(--muted); font-size: 0.85rem !important; font-style: italic; }
 
@@ -406,6 +429,9 @@ h2 {
 /* Mobile */
 @media (max-width: 640px) {
   .nav { flex-direction: column; align-items: flex-start; gap: 0.35rem; padding-block: 0.6rem; }
+  .nav { position: relative; }
+  .nav ul { margin-left: 0; }
+  .theme-toggle { position: absolute; top: 0.45rem; right: 1.25rem; width: 1.9rem; height: 1.9rem; }
   .nav ul { width: 100%; flex-wrap: nowrap; justify-content: space-between; gap: 0.6rem; overflow-x: auto; }
   .nav ul a { font-size: 0.8rem; white-space: nowrap; }
   .entry-body, .li-media { grid-template-columns: 1fr; }
