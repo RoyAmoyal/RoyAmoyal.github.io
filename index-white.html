@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roy Amoyal</title>
+  <meta name="description" content="Roy Amoyal — PhD candidate in 3D Computer Vision at Ben-Gurion University. Gaussian Splatting, 3D registration, and reconstruction.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-white.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a class="brand" href="#">Roy Amoyal</a>
+      <ul>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="about" class="hero">
+      <img class="avatar" src="profile.jpg" alt="Roy Amoyal">
+      <div class="hero-text">
+        <h1>Roy Amoyal</h1>
+        <p class="role">PhD Candidate in Computer Science &middot; 3D Computer Vision<br>
+          <a href="https://www.bgu.ac.il/en/" target="_blank" rel="noopener">Ben-Gurion University of the Negev</a></p>
+        <p>
+          I'm a PhD candidate at Ben-Gurion University, where I also completed my BSc and MSc in
+          Computer Science. I work with <a href="https://openreview.net/profile?id=~Oren_Freifeld1" target="_blank" rel="noopener">Prof. Oren Freifeld</a>
+          in the <a href="https://github.com/BGU-CS-VIL" target="_blank" rel="noopener">Vision, Inference, and Learning (VIL) group</a>,
+          and I'm currently an Applied Scientist intern at <strong>Amazon</strong> (Prime Video Sports).
+        </p>
+        <p>
+          My research is in <strong>3D computer vision</strong>: structure from motion, multi-view stereo,
+          3D reconstruction, Gaussian Splatting, and cross-instance 2D/3D registration. Before my PhD I spent
+          four years building vision systems for autonomous drones, including visual SLAM for GPS-denied navigation.
+        </p>
+        <ul class="links">
+          <li><a href="mailto:roy15957@gmail.com">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=basR76gAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://github.com/RoyAmoyal" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/roy-amoyal/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://openreview.net/profile?id=~Roy_Amoyal1" target="_blank" rel="noopener">OpenReview</a></li>
+          <!-- <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li> -->
+        </ul>
+        <p class="interests">
+          <span>3D Reconstruction</span><span>Gaussian Splatting</span><span>3D Registration</span>
+          <span>Multi-View Geometry</span><span>Visual SLAM</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="timeline">
+        <li><time>2026</time> <span>Three papers accepted to <strong>NeurIPS 2026</strong>, including <em>MACRO</em> as a <strong>Spotlight</strong>.</span></li>
+        <li><time>2026</time> <span>Joined <strong>Amazon</strong> Prime Video Sports as an Applied Scientist (Research) intern.</span></li>
+        <li><time>2026</time> <span><em>Cross-Instance Gaussian Splatting Registration</em> (GSA) accepted to <strong>CVPR 2026</strong>.</span></li>
+        <li><time>2026</time> <span><em>Gaussian Splashing</em> published in <strong>Scientific Reports</strong>.</span></li>
+        <li><time>2024</time> <span><em>Wavelet Convolutions for Large Receptive Fields</em> (WTConv) published at <strong>ECCV 2024</strong>. It has since passed 1,000 citations.</span></li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <article class="pub">
+        <div class="pub-side">
+          <div class="pub-venue">NeurIPS 2026</div>
+          <div class="pub-video"><video style="object-fit: cover" src="semgeo.mp4" data-rate="1.4" autoplay muted loop playsinline aria-label="SemGeo-Gen: correspondences between two airplanes, then two cars, of the same category"></video></div>
+        </div>
+        <div>
+          <h3>SemGeo-Gen: Unsupervised Generation of Approximate Cross-Instance Semantic-Geometric Correspondences</h3>
+          <p class="authors"><b>Roy Amoyal</b>, Shira Ifergane, Oren Freifeld</p>
+          <p class="context">PhD Research</p>
+          <p class="soon">Paper coming soon on arXiv</p>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="pub-side">
+          <div class="pub-venue">NeurIPS 2026<span class="badge">Spotlight &middot; top 1.3%</span><span class="badge">Amazon Research Internship</span></div>
+          <div class="pub-video pub-compare" data-sync data-rate="0.7">
+            <figure><video src="macro_difix.mp4" muted playsinline preload="auto" aria-label="DiFix render"></video><figcaption>DiFix</figcaption></figure>
+            <figure><video src="macro.mp4" muted playsinline preload="auto" aria-label="MACRO render"></video><figcaption>MACRO (ours)</figcaption></figure>
+          </div>
+        </div>
+        <div>
+          <h3>MACRO: Training-free Multi-plane Attention for Closeup Render Optimization</h3>
+          <p class="authors">Nitzan Hodos, <b>Roy Amoyal</b>, Lior Fritz, Ianir Ideses, Sagie Benaim, Netalee Efrat</p>
+          <p class="pub-links">
+            <a href="https://nitzanhod.github.io/MACRO/" target="_blank" rel="noopener">Project page</a>
+            <a href="https://arxiv.org/abs/2607.03875" target="_blank" rel="noopener">arXiv</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="pub-side">
+          <div class="pub-venue">NeurIPS 2026</div>
+          <div class="pub-video"><video src="mvis.mp4" autoplay muted loop playsinline aria-label="Video stitching from multiple moving cameras demo"></video></div>
+        </div>
+        <div>
+          <h3>Video Stitching from Multiple Moving Cameras</h3>
+          <p class="authors">Shira Ifergane, <b>Roy Amoyal</b>, Shahar Benishay, Oren Freifeld</p>
+          <p class="soon">Paper coming soon on arXiv</p>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="pub-side">
+          <div class="pub-venue">CVPR 2026</div>
+          <div class="pub-video"><video class="crop" style="--top: 13.5%; --bottom: 0%; --zoom: 1.25" src="gsa.mp4" autoplay muted loop playsinline data-rate="1.8" aria-label="GSA: cross-instance Gaussian Splatting registration demo"></video></div>
+        </div>
+        <div>
+          <h3>Cross-Instance Gaussian Splatting Registration via Geometry-Aware Feature-Guided Alignment</h3>
+          <p class="authors"><b>Roy Amoyal</b>, Oren Freifeld, Chaim Baskin</p>
+          <p class="context">PhD Research</p>
+          <p class="summary">GSA aligns two independent 3D Gaussian Splatting models with a similarity
+            transform, even when they depict different objects of the same category, using
+            viewpoint-guided spherical map features and a coarse-to-fine registration.</p>
+          <p class="pub-links">
+            <a href="https://bgu-cs-vil.github.io/GSA-project/" target="_blank" rel="noopener">Project page</a>
+            <a href="https://arxiv.org/abs/2603.21936" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/BGU-CS-VIL/GSA" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="pub-side">
+          <div class="pub-venue">Scientific Reports 2026</div>
+          <div class="pub-video pub-compare" data-sync data-rate="1.3">
+            <figure><video style="object-position: 9.5% 50%" src="splashing.webm" muted playsinline preload="auto" aria-label="Original underwater rendering"></video><figcaption>Original</figcaption></figure>
+            <figure><video style="object-position: 90.5% 50%" src="splashing.webm" muted playsinline preload="auto" aria-label="Clean rendering with the water removed"></video><figcaption>Clean</figcaption></figure>
+          </div>
+        </div>
+        <div>
+          <h3>Gaussian Splashing: Direct Volumetric Rendering Underwater</h3>
+          <p class="authors">Nir Mualem, <b>Roy Amoyal</b>, Derya Akkaynak, Oren Freifeld</p>
+          <p class="summary">Extends 3D Gaussian Splatting to underwater scenes by modeling scattering
+            and absorption in the medium, for fast, high-quality reconstruction and rendering.</p>
+          <p class="pub-links">
+            <a href="https://bgu-cs-vil.github.io/gaussiansplashingUW.github.io/" target="_blank" rel="noopener">Project page</a>
+            <a href="https://arxiv.org/abs/2411.19588" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/BGU-CS-VIL/gaussianSplashing" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="pub-side">
+          <div class="pub-venue">ECCV 2024<span class="badge">1,000+ citations</span><span class="badge">Undergraduate Research</span></div>
+          <div class="pub-video pub-compare">
+            <figure><img src="wtconv_erf_replk.png" alt="Effective receptive field with RepLK" loading="lazy"><figcaption>RepLK</figcaption></figure>
+            <figure><img src="wtconv_erf.png" alt="Effective receptive field with WTConv" loading="lazy"><figcaption>WTConv (ours)</figcaption></figure>
+          </div>
+        </div>
+        <div>
+          <h3>Wavelet Convolutions for Large Receptive Fields</h3>
+          <p class="authors">Shahaf E. Finder, <b>Roy Amoyal</b>, Eran Treister, Oren Freifeld</p>
+          <p class="summary">WTConv uses the wavelet transform to grow a CNN's receptive field with
+            only logarithmic parameter growth, as a drop-in replacement for depthwise convolutions.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2407.05848" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/BGU-CS-VIL/WTConv" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <h3 class="subhead">Preprints</h3>
+
+      <article class="pub">
+        <div class="pub-venue">arXiv 2026</div>
+        <div>
+          <h3>Fast and Memory-Efficient Wavelet Convolutions via I/O-Aware Reformulation</h3>
+          <p class="authors">Amit Aflalo, Shahaf E. Finder, <b>Roy Amoyal</b>, Eran Treister, Oren Freifeld</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2608.10805" target="_blank" rel="noopener">arXiv</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <article class="project">
+        <div class="project-top">
+          <div class="project-hero">
+            <video src="race_car.mp4" data-start="8.5" data-end="50.5" data-rate="1.3" autoplay muted loop playsinline aria-label="BGRacing autonomous race car driving through a cone track"></video>
+            <p class="hero-caption">&#127937; <strong>Israel's first</strong> student autonomous race car: <strong>first successful tests</strong> <span class="nowrap">&middot; Feb 2025</span></p>
+          </div>
+          <div class="project-text">
+            <h3>BGRacing Autonomous: Israel's First Student-Built Autonomous Race Car</h3>
+            <p class="project-meta"><strong>Head of the Autonomous Division</strong> &middot; BGRacing, Ben-Gurion University &middot; 2023&ndash;2025</p>
+            <p>
+              I led the autonomous division of BGRacing, Ben-Gurion University's Formula Student team.
+              In 2025 we became the first university team in Israel to build a student-led autonomous race car that drove on its own in real-world tests.
+            </p>
+            <ul class="bullets">
+              <li>Led 20 students in 4 teams across the full autonomy stack: simulator, perception, path planning, and control.</li>
+              <li>LiDAR-only pipeline (detection &rarr; planning &rarr; control) that can drive even without state estimation.</li>
+              <li>Cone position and distance from a single RGB camera, using known intrinsics and cone size, as a LiDAR&nbsp;backup.</li>
+              <li>Extended Kalman Filter fusing GPS, IMU, and wheel speed for state estimation.</li>
+            </ul>
+            <p class="pub-links">
+              <a href="https://www.linkedin.com/posts/roy-amoyal_we-did-it-we-are-proud-to-be-the-first-activity-7294072392140644354-jOsV" target="_blank" rel="noopener">LinkedIn post</a>
+              <a href="https://www.icar.co.il/magazine_4.25/bjomf3jtye/" target="_blank" rel="noopener">Ynet Car Magazine (Hebrew)</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="project-gallery">
+          <div class="project-tile">
+            <div class="pub-video"><video style="object-fit: cover; transform: scale(1.14); transform-origin: top left" src="race_sim.mp4" autoplay muted loop playsinline aria-label="LiDAR-only autonomous driving in simulation"></video></div>
+            <p><strong>Path planning, control &amp; simulation.</strong> Built the team's simulator and a full autonomy loop in it: LiDAR cone detection, path planning in the car's frame, and vehicle control.
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7279184990750298112/" target="_blank" rel="noopener">Post</a></p>
+          </div>
+          <div class="project-tile">
+            <div class="pub-video"><video style="object-fit: cover; transform: scale(1.8); transform-origin: 50% 100%" src="race_camera.mp4" data-start="0" data-end="10.25" autoplay muted loop playsinline aria-label="Cone detection and distance estimation from a single RGB camera"></video></div>
+            <p><strong>Camera perception.</strong> A fast cone detector with distance estimates from a single RGB camera, using known cone size and camera intrinsics.
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7013843269046398977/" target="_blank" rel="noopener">Post</a></p>
+          </div>
+          <div class="project-tile">
+            <div class="pub-video"><img style="width: 100%; height: 100%; object-fit: cover" src="lidar_cones.jpg" alt="Cones detected in a LiDAR point cloud after ground removal" loading="lazy"></div>
+            <p><strong>LiDAR perception.</strong> Cones detected in Innoviz LiDAR point clouds after removing the ground with robust RANSAC plane fitting.
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7013777985358983168/" target="_blank" rel="noopener">Post</a></p>
+          </div>
+          <div class="project-tile">
+            <div class="pub-video"><video style="object-fit: cover" src="race_ynet.mp4" poster="race_ynet_poster.jpg" controls playsinline preload="none" aria-label="Interview about the autonomous race car (Hebrew)"></video></div>
+            <p><strong>In the press: Ynet Car Magazine.</strong> Interviewed about building the car (Hebrew, with sound).
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7316398176528162816/" target="_blank" rel="noopener">Post</a>
+              <a href="https://www.icar.co.il/magazine_4.25/bjomf3jtye/" target="_blank" rel="noopener">Article</a></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-top">
+          <div class="project-hero">
+            <video src="yoso.mp4" poster="yoso_poster.jpg" autoplay muted loop playsinline data-rate="1.5" aria-label="One unedited round of Counter-Strike played with the YOLOv5 aim assistant"></video>
+            <p class="hero-caption">&#9193; <strong>1.5&times; speed</strong> &middot; one unedited round</p>
+          </div>
+          <div class="project-text">
+            <h3>You Only Shoot Once: A Real-Time YOLOv5 Aimbot for Counter-Strike</h3>
+            <p class="project-meta">Personal project &middot; April 2022</p>
+            <p class="highlight-note">Built from scratch in 2&ndash;3 days while home sick with COVID, <strong>before the age of AI coding assistants</strong>: no ChatGPT, no Claude.</p>
+            <p>
+              A real-time computer vision system that plays Counter-Strike: it captures the screen, detects
+              opponents with a YOLOv5 model I trained, and aims and fires automatically. I wrote all of it
+              myself, without a tutorial.
+            </p>
+            <ul class="bullets">
+              <li>Trained YOLOv5, one of the newest and fastest real-time detectors at the time, on gameplay frames I labeled, targeting opponents' head and upper body.</li>
+              <li>Aimed and fired at detected targets in real time on a single GTX&nbsp;980 GPU (4&nbsp;GB&nbsp;VRAM).</li>
+              <li>In the round shown, I only moved and listened for enemies. <strong>Every kill was made automatically by the system, including every headshot</strong>, and it fired about 90% of all shots.</li>
+            </ul>
+            <p class="project-note">Built as a vision experiment. I don't support cheating in online games.</p>
+            <p class="pub-links">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:6922232440920911872/" target="_blank" rel="noopener">LinkedIn post (Hebrew)</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Applied Scientist (Research) Intern &middot; Amazon, Prime Video Sports</h3>
+          <time>2026 &ndash; present</time>
+        </div>
+        <ul>
+          <li>Leading a research project on feed-forward cross-instance 3D registration: learned 3D feature encoders and their evaluation.</li>
+          <li>Built the real-world evaluation benchmark for MACRO, including 3D data collection, COLMAP and 3D Gaussian Splatting ground truth, and large-scale comparison with diffusion-based novel view synthesis methods.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Computer Vision Algorithm Engineer &middot; CopterPix Pro (Autonomous Drones)</h3>
+          <time>2022 &ndash; 2026</time>
+        </div>
+        <div class="entry-body">
+        <ul>
+          <li>Vision-based navigation under GPS denial: visual SLAM, optical flow, and feature matching, fused with LiDAR and IMU.</li>
+          <li>Small-object detection and tracking, and precision landing on ArUco markers.</li>
+          <li>Deployed models on edge devices such as NVIDIA Jetson and Raspberry Pi.</li>
+        </ul>
+          <figure class="entry-figure"><a href="copterpix.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="copterpix.jpg" alt="CopterPix drone with its onboard compute payload, during field testing" loading="lazy"></a><figcaption>Field testing</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Computer Vision Algorithm Developer Intern &middot; Penta Drone Robotics</h3>
+          <time>2021</time>
+        </div>
+        <div class="entry-body">
+        <ul>
+          <li>Developed a precision landing algorithm from the drone's downward camera feed, in simulation. Part of Starship, the Gav-Yam Negev high-tech internship program for outstanding BGU students.</li>
+        </ul>
+          <figure class="entry-figure"><a href="penta_certificate.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 38%" src="penta_certificate.jpg" alt="Starship internship program certificate for Penta Drone Robotics" loading="lazy"></a><figcaption>Certificate (Hebrew)</figcaption></figure>
+        </div>
+      </article>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p class="muted">Teaching Assistant, Department of Computer Science, Ben-Gurion University</p>
+      <ul class="timeline">
+        <li><time>Fall 2026,<br>Fall 2027</time> <span><strong>Introduction to Deep Learning</strong>: neural networks, CNNs, Transformers, PyTorch, and CUDA.</span></li>
+        <li><time>Spring 2027</time> <span><strong>Introduction to Computer Vision</strong>: classical computer vision and modern deep learning approaches.</span></li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li><time>2025 &ndash; now</time> <span><strong>PhD, Computer Science</strong>, Ben-Gurion University. 3D computer vision.</span></li>
+        <li><time>2023 &ndash; 2025</time> <span><strong>MSc, Computer Science</strong>, Ben-Gurion University. Autonomous systems and AI.</span></li>
+        <li><time>2020 &ndash; 2023</time> <span><strong>BSc, Computer Science</strong>, Ben-Gurion University. Data science.</span></li>
+      </ul>
+    </section>
+
+    <section id="activities">
+      <h2>Honors &amp; Activities</h2>
+      <ul class="bullets">
+        <li><div class="li-media"><span><strong>Third place, HackIDC 2021</strong>, the largest student hackathon in Israel (300 students, 60 teams), using feature detection and matching.</span><figure class="entry-figure"><a href="hackidc_win.jpg" target="_blank" rel="noopener"><img src="hackidc_win.jpg" alt="Team Survey Vision with the HackIDC 2021 third-place check" loading="lazy"></a><figcaption>Prize check (Hebrew)</figcaption></figure></div></li>
+        <li>Acknowledged contributor to <a href="https://udlbook.github.io/udlbook/" target="_blank" rel="noopener"><em>Understanding Deep Learning</em></a> by Simon J.D. Prince (listed in the acknowledgments, page 13).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>&copy; <span id="year">2026</span> Roy Amoyal</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Per-video playback speed for single videos, e.g. data-rate="1.25".
+    document.querySelectorAll('video[data-rate]').forEach(v => { v.defaultPlaybackRate = v.playbackRate = parseFloat(v.dataset.rate); });
+
+    // Loop only part of a video, e.g. to skip intro/outro title cards.
+    document.querySelectorAll('video[data-start]').forEach(v => {
+      const start = parseFloat(v.dataset.start), end = parseFloat(v.dataset.end) || Infinity;
+      const jump = () => { v.currentTime = start; };
+      v.readyState >= 1 ? jump() : v.addEventListener('loadedmetadata', jump, { once: true });
+      v.addEventListener('timeupdate', () => { if (v.currentTime >= end || v.currentTime < start - 0.5) jump(); });
+    });
+
+    // Play side-by-side comparison videos in lockstep, restarting them together on each loop.
+    document.querySelectorAll('[data-sync]').forEach(group => {
+      const videos = [...group.querySelectorAll('video')];
+      const [lead, ...rest] = videos;
+      const rate = parseFloat(group.dataset.rate) || 1;
+      const playAll = () => videos.forEach(v => { v.currentTime = 0; v.playbackRate = rate; v.play().catch(() => {}); });
+      let ready = 0;
+      const markReady = () => { if (++ready === videos.length) playAll(); };
+      videos.forEach(v => v.readyState >= 4 ? markReady() : v.addEventListener('canplaythrough', markReady, { once: true }));
+      lead.addEventListener('ended', playAll);
+      lead.addEventListener('timeupdate', () => {
+        rest.forEach(v => { if (Math.abs(v.currentTime - lead.currentTime) > 0.1) v.currentTime = lead.currentTime; });
+      });
+    });
+  </script>
+</body>
+</html>
