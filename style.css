@@ -64,7 +64,19 @@ a:hover { text-decoration: underline; }
   padding-block: 0.85rem;
 }
 
-.brand { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: var(--text); }
+.brand { display: inline-flex; align-items: center; font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: var(--text); }
+
+/* Small photo next to the name, shown once the big photo scrolls away. */
+.brand-avatar {
+  width: 0;
+  height: 1.9rem;
+  margin-right: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: width 0.25s, margin-right 0.25s, opacity 0.25s;
+}
+.scrolled .brand-avatar { width: 1.9rem; margin-right: 0.55rem; opacity: 1; }
 .brand:hover { text-decoration: none; }
 
 .nav ul { display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
@@ -393,6 +405,9 @@ h2 {
 
 /* Mobile */
 @media (max-width: 640px) {
+  .nav { flex-direction: column; align-items: flex-start; gap: 0.35rem; padding-block: 0.6rem; }
+  .nav ul { width: 100%; flex-wrap: nowrap; justify-content: space-between; gap: 0.6rem; overflow-x: auto; }
+  .nav ul a { font-size: 0.8rem; white-space: nowrap; }
   .entry-body, .li-media { grid-template-columns: 1fr; }
   .entry-figure { max-width: 16rem; }
   .project-top { grid-template-columns: 1fr; gap: 1rem; }
