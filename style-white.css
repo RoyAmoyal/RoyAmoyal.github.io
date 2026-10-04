@@ -522,7 +522,15 @@ h2 {
   text-align: center;
 }
 .so-gallery figcaption strong { color: var(--text); font-weight: 600; }
-.so-answers { margin: 0.6rem 0 0; padding-left: 1.2rem; }
+.so-label {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.so-answers { margin: 0.35rem 0 0; padding-left: 1.2rem; }
 .so-answers li { margin-block: 0.3rem; }
 .so-meta { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 
