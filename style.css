@@ -326,6 +326,8 @@ h2 {
 .entry time { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
 .entry ul, .bullets { margin: 0.4rem 0 0; padding-left: 1.2rem; }
 .entry li, .bullets li { margin-block: 0.25rem; }
+#activities .bullets > li { margin-block: 1.1rem; }
+#activities .bullets > li:first-child { margin-top: 0.4rem; }
 
 /* Projects */
 .project-top {
