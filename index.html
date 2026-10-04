@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
   <header class="site-header">
@@ -359,6 +359,22 @@
       <ul class="timeline">
         <li><time>Fall 2026,<br>Fall 2027</time> <span><strong>Introduction to Deep Learning</strong>: neural networks, CNNs, Transformers, PyTorch, and CUDA.</span></li>
         <li><time>Spring 2027</time> <span><strong>Introduction to Computer Vision</strong>: classical computer vision and modern deep learning approaches.</span></li>
+      </ul>
+    </section>
+
+    <section id="community">
+      <h2>Community</h2>
+      <p>
+        <img class="logo" src="logo_stackoverflow.png" alt="" width="22" height="22">Back when Stack Overflow was
+        the go-to place for developers, I was active in its computer vision community, answering questions on
+        OpenCV, object detection, and image processing. My answers have reached <strong>100K+ views</strong>.
+        <a href="https://stackoverflow.com/users/5339876/roy-amoyal" target="_blank" rel="noopener">Profile</a>
+      </p>
+      <ul class="so-answers">
+        <li><a href="https://stackoverflow.com/a/75324593" target="_blank" rel="noopener">YOLOv8: get the predicted bounding box</a> <span class="so-meta">17 votes &middot; 58K views</span></li>
+        <li><a href="https://stackoverflow.com/a/69307762" target="_blank" rel="noopener">Face recognition with MediaPipe in Python</a> <span class="so-meta">Accepted &middot; 12K views</span></li>
+        <li><a href="https://stackoverflow.com/a/69691167" target="_blank" rel="noopener">ArUco marker detection returns no IDs</a> <span class="so-meta">Accepted</span></li>
+        <li><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener">Real-time bounding boxes for object detection without ML</a> <span class="so-meta">Accepted</span></li>
       </ul>
     </section>
 

@@ -496,6 +496,11 @@ h2 {
   text-align: center;
 }
 
+/* Community: selected Stack Overflow answers. */
+.so-answers { margin: 0.6rem 0 0; padding-left: 1.2rem; }
+.so-answers li { margin-block: 0.3rem; }
+.so-meta { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+
 /* Footer */
 .footer {
   padding-block: 2rem 3rem;
