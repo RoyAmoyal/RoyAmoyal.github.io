@@ -156,21 +156,6 @@ h1 { font-size: 2.4rem; margin: 0 0 0.25rem; }
 .links a:hover { border-color: var(--accent); text-decoration: none; }
 
 
-/* Inline "Read more" link in the intro. */
-.read-more {
-  padding: 0;
-  margin-left: 0.25rem;
-  border: 0;
-  background: none;
-  color: var(--accent);
-  font: inherit;
-  font-weight: 500;
-  cursor: pointer;
-}
-.read-more::after { content: " \25BE"; font-size: 0.8em; }
-.read-more[aria-expanded="true"]::after { content: " \25B4"; }
-.read-more:hover { text-decoration: underline; }
-
 .interests { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .interests span {
   font-size: 0.8rem;

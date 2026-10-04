@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style-white.css?v=4">
+  <link rel="stylesheet" href="style-white.css?v=5">
 </head>
 <body>
   <header class="site-header">
@@ -42,16 +42,10 @@
           building vision systems for autonomous drones.
         </p>
         <p>
-          In my first PhD year (2026), I've used <strong>semantic-geometric representations</strong> to tackle
+          In my first PhD year (2026), I've been exploring <strong>semantic-geometric representations</strong> to tackle
           a hard problem: matching and aligning <em>different</em> objects of the same category. This line of
           work has already led to two papers at <strong>CVPR 2026</strong> and <strong>NeurIPS 2026</strong>,
           with a third on the way.
-          <button class="read-more" type="button" aria-expanded="false" aria-controls="research-more">Read more</button>
-        </p>
-        <p id="research-more" hidden>
-          Why it's hard: two airplanes or two cars can have dramatically different shapes, so geometry alone
-          breaks down. Semantic-geometric representations capture both what each part is and where it is,
-          so matching still works across very different shapes.
         </p>
 
 
@@ -362,17 +356,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // "Read more" in the intro reveals the longer research explanation.
-    document.querySelectorAll('.read-more').forEach(btn => {
-      const more = document.getElementById(btn.getAttribute('aria-controls'));
-      btn.addEventListener('click', () => {
-        const open = more.hidden;
-        more.hidden = !open;
-        btn.setAttribute('aria-expanded', open);
-        btn.textContent = open ? 'Show less' : 'Read more';
-      });
-    });
 
     // Show the small photo in the top bar once the big profile photo has scrolled out of view.
     const header = document.querySelector('.site-header');
