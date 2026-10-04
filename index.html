@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header class="site-header">
@@ -50,12 +50,18 @@
           building vision systems for autonomous drones.
         </p>
         <p>
-          In my first PhD year (2026), I've tackled a hard problem: matching and aligning <em>different</em>
-          objects of the same category, like two airplanes or cars with very different shapes, using
-          <strong>semantic-geometric representations</strong> that capture what each part is and where.
-          This line of work has already led to two papers at <strong>CVPR 2026</strong> and
-          <strong>NeurIPS 2026</strong>, with a third on the way.
+          In my first PhD year (2026), I've used <strong>semantic-geometric representations</strong> to tackle
+          a hard problem: matching and aligning <em>different</em> objects of the same category. This line of
+          work has already led to two papers at <strong>CVPR 2026</strong> and <strong>NeurIPS 2026</strong>,
+          with a third on the way.
+          <button class="read-more" type="button" aria-expanded="false" aria-controls="research-more">Read more</button>
         </p>
+        <p id="research-more" hidden>
+          Why it's hard: two airplanes or two cars can have dramatically different shapes, so geometry alone
+          breaks down. Semantic-geometric representations capture both what each part is and where it is,
+          so matching still works across very different shapes.
+        </p>
+
 
 
         <ul class="links">
@@ -364,6 +370,17 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // "Read more" in the intro reveals the longer research explanation.
+    document.querySelectorAll('.read-more').forEach(btn => {
+      const more = document.getElementById(btn.getAttribute('aria-controls'));
+      btn.addEventListener('click', () => {
+        const open = more.hidden;
+        more.hidden = !open;
+        btn.setAttribute('aria-expanded', open);
+        btn.textContent = open ? 'Show less' : 'Read more';
+      });
+    });
 
     // Light/dark toggle; the choice is remembered for next visits.
     const themeBtn = document.querySelector('.theme-toggle');
