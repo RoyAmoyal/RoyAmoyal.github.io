@@ -197,6 +197,20 @@ h2 {
 }
 .timeline time { color: var(--muted); font-variant-numeric: tabular-nums; }
 
+/* News: a short scrolling box (height set in JS to fit three items). */
+.news-scroll {
+  position: relative;
+  max-height: 8.5rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 2.25rem), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 2.25rem), transparent);
+}
+.news-scroll.at-end { -webkit-mask-image: none; mask-image: none; }
+.news-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+
 /* Publications */
 .pub {
   display: grid;

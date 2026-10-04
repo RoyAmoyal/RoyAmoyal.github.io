@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style-white.css?v=12">
+  <link rel="stylesheet" href="style-white.css?v=13">
 </head>
 <body>
   <header class="site-header">
@@ -66,7 +66,7 @@
 
     <section id="news">
       <h2>News</h2>
-      <ul class="timeline">
+      <ul class="timeline news-scroll" tabindex="0" aria-label="News, scroll for older items">
         <li><time>2026</time> <span>Three papers accepted to <strong>NeurIPS 2026</strong>, including <em>MACRO</em> as a <strong>Spotlight</strong>.</span></li>
         <li><time>2026</time> <span>Joined <strong>Amazon</strong> Prime Video Sports as an Applied Scientist (Research) intern.</span></li>
         <li><time>2026</time> <span><em>Cross-Instance Gaussian Splatting Registration</em> (GSA) accepted to <strong>CVPR 2026</strong>.</span></li>
@@ -370,6 +370,21 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // News: show the three newest items; older ones scroll. Fade hints at more until the end.
+    const news = document.querySelector('.news-scroll');
+    if (news) {
+      const fitNews = () => {
+        const items = news.children;
+        news.style.maxHeight = items.length > 3 ? `${items[3].offsetTop + 16}px` : 'none';
+        updateNewsFade();
+      };
+      const updateNewsFade = () => news.classList.toggle('at-end', news.scrollTop + news.clientHeight >= news.scrollHeight - 2);
+      news.addEventListener('scroll', updateNewsFade, { passive: true });
+      addEventListener('resize', fitNews);
+      addEventListener('load', fitNews);
+      fitNews();
+    }
 
     // Show the small photo in the top bar once the big profile photo has scrolled out of view.
     const header = document.querySelector('.site-header');

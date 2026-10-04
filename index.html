@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
   <header class="site-header">
@@ -74,7 +74,7 @@
 
     <section id="news">
       <h2>News</h2>
-      <ul class="timeline">
+      <ul class="timeline news-scroll" tabindex="0" aria-label="News, scroll for older items">
         <li><time>2026</time> <span>Three papers accepted to <strong>NeurIPS 2026</strong>, including <em>MACRO</em> as a <strong>Spotlight</strong>.</span></li>
         <li><time>2026</time> <span>Joined <strong>Amazon</strong> Prime Video Sports as an Applied Scientist (Research) intern.</span></li>
         <li><time>2026</time> <span><em>Cross-Instance Gaussian Splatting Registration</em> (GSA) accepted to <strong>CVPR 2026</strong>.</span></li>
@@ -389,6 +389,21 @@
       setThemeLabel();
     });
     setThemeLabel();
+
+    // News: show the three newest items; older ones scroll. Fade hints at more until the end.
+    const news = document.querySelector('.news-scroll');
+    if (news) {
+      const fitNews = () => {
+        const items = news.children;
+        news.style.maxHeight = items.length > 3 ? `${items[3].offsetTop + 16}px` : 'none';
+        updateNewsFade();
+      };
+      const updateNewsFade = () => news.classList.toggle('at-end', news.scrollTop + news.clientHeight >= news.scrollHeight - 2);
+      news.addEventListener('scroll', updateNewsFade, { passive: true });
+      addEventListener('resize', fitNews);
+      addEventListener('load', fitNews);
+      fitNews();
+    }
 
     // Show the small photo in the top bar once the big profile photo has scrolled out of view.
     const header = document.querySelector('.site-header');
