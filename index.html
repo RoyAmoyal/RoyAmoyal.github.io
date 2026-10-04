@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
   <header class="site-header">
@@ -81,6 +81,7 @@
         <li><time>2026</time> <span><em>Gaussian Splashing</em> published in <strong>Scientific Reports</strong>.</span></li>
         <li><time>2024</time> <span><em>Wavelet Convolutions for Large Receptive Fields</em> (WTConv) published at <strong>ECCV 2024</strong>. It has since passed 1,000 citations.</span></li>
       </ul>
+      <button class="news-more" type="button">Scroll for more &darr;</button>
     </section>
 
     <section id="publications">
@@ -398,7 +399,13 @@
         news.style.maxHeight = items.length > 3 ? `${items[3].offsetTop + 16}px` : 'none';
         updateNewsFade();
       };
-      const updateNewsFade = () => news.classList.toggle('at-end', news.scrollTop + news.clientHeight >= news.scrollHeight - 2);
+      const newsMore = document.querySelector('.news-more');
+      const updateNewsFade = () => {
+        const atEnd = news.scrollTop + news.clientHeight >= news.scrollHeight - 2;
+        news.classList.toggle('at-end', atEnd);
+        newsMore.hidden = atEnd;
+      };
+      newsMore.addEventListener('click', () => news.scrollBy({ top: news.clientHeight * 0.8, behavior: 'smooth' }));
       news.addEventListener('scroll', updateNewsFade, { passive: true });
       addEventListener('resize', fitNews);
       addEventListener('load', fitNews);

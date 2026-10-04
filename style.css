@@ -210,6 +210,17 @@ h2 {
 }
 .news-scroll.at-end { -webkit-mask-image: none; mask-image: none; }
 .news-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+.news-more {
+  margin-top: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.news-more:hover { text-decoration: underline; }
 
 /* Publications */
 .pub {
