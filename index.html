@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
   <header class="site-header">
@@ -380,7 +380,7 @@
       </ul>
       <div class="so-gallery">
         <figure><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener"><img src="so_covid_bbox.jpg" alt="COVID-19 rapid test outlined in green by color-based detection" loading="lazy"></a><figcaption>Detecting a COVID-19 test<br>by color, without ML</figcaption></figure>
-        <figure><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener"><img class="so-diagram" src="so_face_tracking.png" alt="Diagram: tracking a face center between frames using x and y offsets" loading="lazy"></a><figcaption>Tracking faces across frames<br>on <em>very</em> low-compute hardware</figcaption></figure>
+        <figure><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener"><img class="so-diagram" src="so_face_tracking.png" alt="Diagram: tracking a face center between frames using x and y offsets" loading="lazy"></a><figcaption>Tracking faces across frames<br>on a <strong>very low-compute edge device</strong></figcaption></figure>
         <figure class="so-pair"><a href="https://stackoverflow.com/a/69510686" target="_blank" rel="noopener"><img src="so_large_boxes.jpg" alt="Large objects in a dish found with bounding boxes and centers" loading="lazy"><img src="so_large_contours.jpg" alt="The same large objects found with contours and centers" loading="lazy"></a><figcaption>Separating large objects from dense<br>small ones: boxes and contours</figcaption></figure>
       </div>
     </section>
