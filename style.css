@@ -548,7 +548,7 @@ h2 {
   align-items: flex-start;
   margin-top: 1rem;
 }
-.so-gallery figure { margin: 0; }
+.so-gallery figure { display: flex; flex-direction: column; align-items: center; margin: 0; }
 .so-gallery img {
   display: block;
   height: 8.5rem;
@@ -556,7 +556,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 6px;
 }
-.so-gallery .so-diagram { background: #fff; }
+.so-gallery .so-diagram { padding-inline: 1.6rem; background: #fff; }
 .so-pair a { display: flex; gap: 0.4rem; }
 .so-gallery figcaption {
   margin-top: 0.3rem;
