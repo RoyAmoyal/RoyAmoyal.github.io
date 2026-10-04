@@ -522,9 +522,11 @@ h2 {
   text-align: center;
 }
 .so-gallery figcaption strong { color: var(--text); font-weight: 600; }
-#community .service { margin: 0 0 1.4rem; }
-.so-years { margin: 0 0 0.3rem; color: var(--muted); font-size: 0.85rem; }
-#community .so-years + p { margin-top: 0; }
+.so-years { color: var(--muted); font-size: 0.85rem; }
+#community .bullets > li { margin-block: 1.1rem; }
+#community .bullets > li:first-child { margin-top: 0.4rem; }
+#community .bullets > li > p { margin: 0.3rem 0 0; }
+#community .so-head { margin: 0; }
 .so-label {
   margin: 1rem 0 0;
   color: var(--muted);

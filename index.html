@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="style.css?v=25">
 </head>
 <body>
   <header class="site-header">
@@ -363,27 +363,28 @@
 
     <section id="community">
       <h2>Service &amp; Community</h2>
-      <p class="service"><strong>Reviewer</strong> for ICCV 2025, CVPR 2026, and NeurIPS 2026.</p>
-      <p class="so-years">2021&ndash;2022</p>
-      <p>
-        <img class="logo" src="logo_stackoverflow.png" alt="" width="22" height="22">Before AI assistants like
-        ChatGPT, Claude, and Gemini, developers turned to Stack Overflow for help. Early in my computer vision
+      <ul class="bullets">
+        <li><strong>Reviewer</strong> for ICCV 2025, CVPR 2026, and NeurIPS 2026.</li>
+        <li>
+          <p class="so-head"><img class="logo" src="logo_stackoverflow.png" alt="" width="22" height="22"><strong>Stack Overflow contributor</strong> <span class="so-years">&middot; 2021&ndash;2022</span></p>
+          <p>Before AI assistants like ChatGPT, Claude, and Gemini, developers turned to Stack Overflow for help. Early in my computer vision
         journey, I answered questions in its computer vision community on OpenCV, object detection, and image processing, mostly with
-        <strong>classical computer vision</strong>.
-      </p>
-      <p class="so-label">Selected accepted answers</p>
-      <ul class="so-answers">
-        <li><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener">Real-time detection of a COVID-19 rapid test without ML</a></li>
-        <li><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener">Counting faces in real time on a Raspberry Pi</a></li>
-        <li><a href="https://stackoverflow.com/a/69510686" target="_blank" rel="noopener">Detecting large objects among dense, similar-colored small ones</a></li>
-        <li><a href="https://stackoverflow.com/a/69302102" target="_blank" rel="noopener">YOLOv3 returning zero confidence for every class</a></li>
-        <li><a href="https://stackoverflow.com/a/69691167" target="_blank" rel="noopener">ArUco marker detection returns no IDs</a></li>
+        <strong>classical computer vision</strong>.</p>
+          <p class="so-label">Selected accepted answers</p>
+          <ul class="so-answers">
+            <li><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener">Real-time detection of a COVID-19 rapid test without ML</a></li>
+            <li><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener">Counting faces in real time on a Raspberry Pi</a></li>
+            <li><a href="https://stackoverflow.com/a/69510686" target="_blank" rel="noopener">Detecting large objects among dense, similar-colored small ones</a></li>
+            <li><a href="https://stackoverflow.com/a/69302102" target="_blank" rel="noopener">YOLOv3 returning zero confidence for every class</a></li>
+            <li><a href="https://stackoverflow.com/a/69691167" target="_blank" rel="noopener">ArUco marker detection returns no IDs</a></li>
+          </ul>
+          <div class="so-gallery">
+            <figure><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener"><img src="so_covid_bbox.jpg" alt="COVID-19 rapid test outlined in green by color-based detection" loading="lazy"></a><figcaption>Detecting a COVID-19 test<br>by color, without ML</figcaption></figure>
+            <figure><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener"><img class="so-diagram" src="so_face_tracking.png" alt="Diagram: tracking a face center between frames using x and y offsets" loading="lazy"></a><figcaption>Tracking faces across frames<br>on a <strong>very low-compute edge device</strong></figcaption></figure>
+            <figure class="so-pair"><a href="https://stackoverflow.com/a/69510686" target="_blank" rel="noopener"><img src="so_large_boxes.jpg" alt="Large objects in a dish found with bounding boxes and centers" loading="lazy"><img src="so_large_contours.jpg" alt="The same large objects found with contours and centers" loading="lazy"></a><figcaption>Separating large objects from dense<br>small ones: boxes and contours</figcaption></figure>
+          </div>
+        </li>
       </ul>
-      <div class="so-gallery">
-        <figure><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener"><img src="so_covid_bbox.jpg" alt="COVID-19 rapid test outlined in green by color-based detection" loading="lazy"></a><figcaption>Detecting a COVID-19 test<br>by color, without ML</figcaption></figure>
-        <figure><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener"><img class="so-diagram" src="so_face_tracking.png" alt="Diagram: tracking a face center between frames using x and y offsets" loading="lazy"></a><figcaption>Tracking faces across frames<br>on a <strong>very low-compute edge device</strong></figcaption></figure>
-        <figure class="so-pair"><a href="https://stackoverflow.com/a/69510686" target="_blank" rel="noopener"><img src="so_large_boxes.jpg" alt="Large objects in a dish found with bounding boxes and centers" loading="lazy"><img src="so_large_contours.jpg" alt="The same large objects found with contours and centers" loading="lazy"></a><figcaption>Separating large objects from dense<br>small ones: boxes and contours</figcaption></figure>
-      </div>
     </section>
 
 
