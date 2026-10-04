@@ -427,12 +427,14 @@ h2 {
   box-shadow: 0 0 0 4px var(--bg);
 }
 .xp-marker img { width: 2.1rem; height: 2.1rem; object-fit: contain; }
-.xp-marker-plain {
-  width: 1rem;
-  height: 1rem;
-  margin: 0.75rem;
-  border-radius: 50%;
-  background: var(--accent);
+/* Generic drone icon for a role without a logo, on the same white tile. */
+.xp-marker-icon svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  fill: none;
+  stroke: #5f6368;
+  stroke-width: 1.6;
+  stroke-linecap: round;
 }
 .xp-body time { color: var(--muted); font-size: 0.85rem; }
 .xp-body h3 { margin: 0.1rem 0 0.15rem; font-size: 1.1rem; }
