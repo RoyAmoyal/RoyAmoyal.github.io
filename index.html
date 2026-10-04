@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=22">
+  <link rel="stylesheet" href="style.css?v=23">
 </head>
 <body>
   <header class="site-header">
@@ -364,10 +364,11 @@
 
     <section id="community">
       <h2>Community</h2>
+      <p class="so-years">2021&ndash;2022</p>
       <p>
         <img class="logo" src="logo_stackoverflow.png" alt="" width="22" height="22">Before AI assistants like
         ChatGPT, Claude, and Gemini, developers turned to Stack Overflow for help. Early in my computer vision
-        journey (2021&ndash;2022), I answered questions in its computer vision community on OpenCV, object detection, and image processing, mostly with
+        journey, I answered questions in its computer vision community on OpenCV, object detection, and image processing, mostly with
         <strong>classical computer vision</strong>.
       </p>
       <p class="so-label">Selected accepted answers</p>
