@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style-white.css?v=17">
+  <link rel="stylesheet" href="style-white.css?v=18">
 </head>
 <body>
   <header class="site-header">
@@ -356,28 +356,26 @@
 
     <section id="community">
       <h2>Community</h2>
-      <div class="li-media">
-        <div class="li-text">
-          <p>
-            <img class="logo" src="logo_stackoverflow.png" alt="" width="22" height="22">Back when Stack Overflow was
-            the go-to place for developers, I was active in its computer vision community, answering questions on
-            OpenCV, object detection, and image processing. My answers have reached <strong>100K+ views</strong>.
-            <a href="https://stackoverflow.com/users/5339876/roy-amoyal" target="_blank" rel="noopener">Profile</a>
-          </p>
-          <ul class="so-answers">
-            <li><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener">Real-time detection of a COVID-19 rapid test without ML</a> <span class="so-meta">Accepted</span></li>
-            <li><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener">Counting faces in real time on a Raspberry Pi</a> <span class="so-meta">Accepted</span></li>
-            <li><a href="https://stackoverflow.com/a/75324593" target="_blank" rel="noopener">YOLOv8: get the predicted bounding box</a> <span class="so-meta">17 votes &middot; 58K views</span></li>
-            <li><a href="https://stackoverflow.com/a/69307762" target="_blank" rel="noopener">Face recognition with MediaPipe in Python</a> <span class="so-meta">Accepted &middot; 12K views</span></li>
-            <li><a href="https://stackoverflow.com/a/69691167" target="_blank" rel="noopener">ArUco marker detection returns no IDs</a> <span class="so-meta">Accepted</span></li>
-          </ul>
-        </div>
-        <div class="fig-stack">
-          <figure class="entry-figure"><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener"><img style="aspect-ratio: 600 / 334" src="so_covid_bbox.jpg" alt="COVID-19 rapid test outlined in green by color-based detection" loading="lazy"></a><figcaption>COVID-19 test, detected without ML</figcaption></figure>
-          <figure class="entry-figure"><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener"><img style="object-fit: contain; background: #fff" src="so_face_tracking.png" alt="Diagram: tracking a face center between frames using x and y offsets" loading="lazy"></a><figcaption>Tracking faces across frames on low-compute hardware</figcaption></figure>
-        </div>
+      <p>
+        <img class="logo" src="logo_stackoverflow.png" alt="" width="22" height="22">Back when Stack Overflow was
+        the go-to place for developers, I was active in its computer vision community, answering questions on
+        OpenCV, object detection, and image processing. My answers have reached <strong>100K+ views</strong>.
+        <a href="https://stackoverflow.com/users/5339876/roy-amoyal" target="_blank" rel="noopener">Profile</a>
+      </p>
+      <ul class="so-answers">
+        <li><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener">Real-time detection of a COVID-19 rapid test without ML</a> <span class="so-meta">Accepted</span></li>
+        <li><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener">Counting faces in real time on a Raspberry Pi</a> <span class="so-meta">Accepted</span></li>
+        <li><a href="https://stackoverflow.com/a/69510686" target="_blank" rel="noopener">Detecting large objects among dense, similar-colored small ones</a> <span class="so-meta">Accepted</span></li>
+        <li><a href="https://stackoverflow.com/a/69302102" target="_blank" rel="noopener">YOLOv3 returning zero confidence for every class</a> <span class="so-meta">Accepted &middot; 1K views</span></li>
+        <li><a href="https://stackoverflow.com/a/69691167" target="_blank" rel="noopener">ArUco marker detection returns no IDs</a> <span class="so-meta">Accepted</span></li>
+      </ul>
+      <div class="so-gallery">
+        <figure><a href="https://stackoverflow.com/a/69307887" target="_blank" rel="noopener"><img src="so_covid_bbox.jpg" alt="COVID-19 rapid test outlined in green by color-based detection" loading="lazy"></a></figure>
+        <figure><a href="https://stackoverflow.com/a/72133293" target="_blank" rel="noopener"><img class="so-diagram" src="so_face_tracking.png" alt="Diagram: tracking a face center between frames using x and y offsets" loading="lazy"></a><figcaption>Tracking faces across frames on <em>very</em> low-compute hardware</figcaption></figure>
+        <figure class="so-pair"><a href="https://stackoverflow.com/a/69510686" target="_blank" rel="noopener"><img src="so_large_boxes.jpg" alt="Large objects in a dish found with bounding boxes and centers" loading="lazy"><img src="so_large_contours.jpg" alt="The same large objects found with contours and centers" loading="lazy"></a><figcaption>Large objects with boxes and contours</figcaption></figure>
       </div>
     </section>
+
 
 
     <section id="education">

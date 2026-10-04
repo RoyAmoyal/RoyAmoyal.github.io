@@ -540,7 +540,30 @@ h2 {
 }
 
 /* Community: selected Stack Overflow answers. */
-.fig-stack { display: grid; gap: 0.9rem; }
+/* Community images: one row, same height; wraps on narrow screens. */
+.so-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+.so-gallery figure { margin: 0; }
+.so-gallery img {
+  display: block;
+  height: 8.5rem;
+  width: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.so-gallery .so-diagram { background: #fff; }
+.so-pair a { display: flex; gap: 0.4rem; }
+.so-gallery figcaption {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
 .so-answers { margin: 0.6rem 0 0; padding-left: 1.2rem; }
 .so-answers li { margin-block: 0.3rem; }
 .so-meta { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
@@ -554,8 +577,7 @@ h2 {
 
 /* Mobile */
 @media (max-width: 640px) {
-  .fig-stack { grid-template-columns: 1fr 1fr; align-items: start; }
-  .fig-stack .entry-figure { max-width: none; }
+  .so-gallery img { height: 6.5rem; }
   .xp { grid-template-columns: 2.5rem 1fr; gap: 0.9rem; }
   .xp-photo { grid-column: 2; width: 100%; max-width: 16rem; }
   .nav { flex-direction: column; align-items: flex-start; gap: 0.35rem; padding-block: 0.6rem; }
