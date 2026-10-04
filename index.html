@@ -12,7 +12,7 @@
     // Apply a saved light/dark choice before the page draws, to avoid a flash.
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
   <header class="site-header">
@@ -291,45 +291,57 @@
     <section id="experience">
       <h2>Experience</h2>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h3><img class="logo" src="logo_amazon.png" alt="" width="22" height="22">Applied Scientist (Research) Intern &middot; Amazon, Prime Video Sports</h3>
-          <time>2026 &ndash; present</time>
-        </div>
-        <ul>
-          <li>Leading a research project on feed-forward cross-instance 3D registration: learned 3D feature encoders and their evaluation.</li>
-          <li>Built the real-world evaluation benchmark for MACRO, including 3D data collection, COLMAP and 3D Gaussian Splatting ground truth, and large-scale comparison with diffusion-based novel view synthesis methods.</li>
-        </ul>
-      </article>
+      <!-- Timeline: newest first. Detailed bullets are kept in comments inside each item; uncomment to show them. -->
+      <ol class="xp-timeline">
+        <li class="xp">
+          <span class="xp-marker"><img src="logo_amazon.png" alt="" width="40" height="40"></span>
+          <div class="xp-body">
+            <time>2026 &ndash; present</time>
+            <h3>Applied Scientist (Research) Intern</h3>
+            <p class="xp-org">Amazon &middot; Prime Video Sports</p>
+            <!--
+            <ul>
+              <li>Leading a research project on feed-forward cross-instance 3D registration: learned 3D feature encoders and their evaluation.</li>
+              <li>Built the real-world evaluation benchmark for MACRO, including 3D data collection, COLMAP and 3D Gaussian Splatting ground truth, and large-scale comparison with diffusion-based novel view synthesis methods.</li>
+            </ul>
+            -->
+          </div>
+        </li>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h3><img class="logo" src="logo_copterpix.png" alt="" width="22" height="22">Computer Vision Algorithm Engineer &middot; CopterPix Pro (Autonomous Drones)</h3>
-          <time>2022 &ndash; 2026</time>
-        </div>
-        <div class="entry-body">
-        <ul>
-          <li>Vision-based navigation under GPS denial: visual SLAM, optical flow, and feature matching, fused with LiDAR and IMU.</li>
-          <li>Small-object detection and tracking, and precision landing on ArUco markers.</li>
-          <li>Deployed models on edge devices such as NVIDIA Jetson and Raspberry Pi.</li>
-        </ul>
-          <figure class="entry-figure"><a href="copterpix.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="copterpix.jpg" alt="CopterPix drone with its onboard compute payload, during field testing" loading="lazy"></a><figcaption>Field testing</figcaption></figure>
-        </div>
-      </article>
+        <li class="xp">
+          <span class="xp-marker"><img src="logo_copterpix.png" alt="" width="40" height="40"></span>
+          <div class="xp-body">
+            <time>2022 &ndash; 2026</time>
+            <h3>Computer Vision Algorithm Engineer</h3>
+            <p class="xp-org">CopterPix Pro &middot; Autonomous Drones</p>
+            <!--
+            <ul>
+              <li>Vision-based navigation under GPS denial: visual SLAM, optical flow, and feature matching, fused with LiDAR and IMU.</li>
+              <li>Small-object detection and tracking, and precision landing on ArUco markers.</li>
+              <li>Deployed models on edge devices such as NVIDIA Jetson and Raspberry Pi.</li>
+            </ul>
+            -->
+          </div>
+          <figure class="xp-photo"><a href="copterpix.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="copterpix.jpg" alt="CopterPix drone with its onboard compute payload, during field testing" loading="lazy"></a><figcaption>Field testing</figcaption></figure>
+        </li>
 
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Computer Vision Algorithm Developer Intern &middot; Penta Drone Robotics</h3>
-          <time>2021</time>
-        </div>
-        <div class="entry-body">
-        <ul>
-          <li>Developed a precision landing algorithm from the drone's downward camera feed, in simulation. Part of Starship, the Gav-Yam Negev high-tech internship program for outstanding BGU students.</li>
-        </ul>
-          <figure class="entry-figure"><a href="penta_certificate.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 38%" src="penta_certificate.jpg" alt="Starship internship program certificate for Penta Drone Robotics" loading="lazy"></a><figcaption>Certificate (Hebrew)</figcaption></figure>
-        </div>
-      </article>
+        <li class="xp">
+          <span class="xp-marker xp-marker-plain" aria-hidden="true"></span>
+          <div class="xp-body">
+            <time>2021</time>
+            <h3>Computer Vision Algorithm Developer Intern</h3>
+            <p class="xp-org">Penta Drone Robotics &middot; Starship program</p>
+            <!--
+            <ul>
+              <li>Developed a precision landing algorithm from the drone's downward camera feed, in simulation. Part of Starship, the Gav-Yam Negev high-tech internship program for outstanding BGU students.</li>
+            </ul>
+            -->
+          </div>
+          <figure class="xp-photo"><a href="penta_certificate.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 38%" src="penta_certificate.jpg" alt="Starship internship program certificate for Penta Drone Robotics" loading="lazy"></a><figcaption>Certificate (Hebrew)</figcaption></figure>
+        </li>
+      </ol>
     </section>
+
 
     <section id="teaching">
       <h2>Teaching</h2>
