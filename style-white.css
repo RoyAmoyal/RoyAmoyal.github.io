@@ -383,6 +383,16 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 6px;
 }
+/* Cutout images (transparent background): no frame, keep the natural shape. */
+.entry-figure-plain img {
+  width: auto;
+  height: 9.5rem;
+  margin-inline: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+}
 .entry-figure figcaption {
   margin-top: 0.3rem;
   color: var(--muted);
