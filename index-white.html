@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-white.css?v=25">
   <script>
-    // Google Analytics: runs only on the live site, not on local copies.
+    // Google Analytics and Microsoft Clarity: run only on the live site, not on local copies.
     if (location.hostname === 'royamoyal.github.io') {
       const ga = document.createElement('script');
       ga.async = true;
@@ -20,6 +20,13 @@
       window.gtag = function () { dataLayer.push(arguments); };
       gtag('js', new Date());
       gtag('config', 'G-GLL4VV46KW');
+
+      // Microsoft Clarity (visit recordings and heatmaps).
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+        t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'ysxqgvgo44');
     }
   </script>
 </head>
